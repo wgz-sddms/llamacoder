@@ -43,8 +43,8 @@ export default function CodeViewer({
     >
       <SandpackPreview
         className="flex h-full w-full grow flex-col justify-center p-4 md:pt-16"
-        showOpenInCodeSandbox={false}
-        showRefreshButton={false}
+        showOpenInCodeSandbox={true}
+        showRefreshButton={true}
       />
     </SandpackProvider>
   );

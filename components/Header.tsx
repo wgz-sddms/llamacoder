@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/logo.png";
-import GithubIcon from "./github-icon";
+// import GithubIcon from "./github-icon";
 
 export default function Header() {
   return (
@@ -12,14 +12,14 @@ export default function Header() {
           <span className="text-blue-600">Llama</span>Coder
         </h1>
       </Link>
-      <a
+      {/* <a
         href="https://github.com/nutlope/llamacoder"
         target="_blank"
         className="ml-auto hidden items-center gap-3 rounded-2xl bg-white px-6 py-2 sm:flex"
       >
         <GithubIcon className="h-4 w-4" />
         <span>GitHub Repo</span>
-      </a>
+      </a> */}
     </header>
   );
 }

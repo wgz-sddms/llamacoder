@@ -21,23 +21,29 @@ export default function Home() {
     "initial" | "creating" | "created" | "updating" | "updated"
   >("initial");
   let [prompt, setPrompt] = useState("");
+  
+  // define LLM on ollama
   let models = [
     {
-      label: "Llama 3.1 405B",
-      value: "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+      label: "Qwen 2.5 7B",
+      value: "qwen2.5",
     },
-    {
-      label: "Llama 3.2 90B",
-      value: "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
-    },
-    {
-      label: "Qwen 2.5 72B",
-      value: "Qwen/Qwen2.5-72B-Instruct-Turbo",
-    },
-    {
-      label: "Gemma 2 27B",
-      value: "google/gemma-2-27b-it",
-    },
+    // {
+    //   label: "Llama 3.1 405B",
+    //   value: "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+    // },
+    // {
+    //   label: "Llama 3.2 90B",
+    //   value: "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
+    // },
+    // {
+    //   label: "Qwen 2.5 72B",
+    //   value: "Qwen/Qwen2.5-72B-Instruct-Turbo",
+    // },
+    // {
+    //   label: "Gemma 2 27B",
+    //   value: "google/gemma-2-27b-it",
+    // },
   ];
   let [model, setModel] = useState(models[0].value);
   let [shadcn, setShadcn] = useState(false);
@@ -144,12 +150,11 @@ export default function Home() {
     <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-20">
       <a
         className="mb-4 inline-flex h-7 shrink-0 items-center gap-[9px] rounded-[50px] border-[0.5px] border-solid border-[#E6E6E6] bg-[rgba(234,238,255,0.65)] bg-gray-100 px-7 py-5 shadow-[0px_1px_1px_0px_rgba(0,0,0,0.25)]"
-        href="https://dub.sh/together-ai/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup"
+        href="https://ollama.com/library"
         target="_blank"
       >
         <span className="text-center">
-          Powered by <span className="font-medium">Llama 3.1</span> and{" "}
-          <span className="font-medium">Together AI</span>
+          Powered by <span className="font-medium">Ollama</span>
         </span>
       </a>
       <h1 className="my-6 max-w-3xl text-4xl font-bold text-gray-800 sm:text-6xl">
